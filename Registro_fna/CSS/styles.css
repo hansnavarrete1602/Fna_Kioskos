@@ -1,0 +1,204 @@
+@import url('https://fonts.cdnfonts.com/css/myriad-pro');
+
+  :root{
+    --blanco: #FFFFFF;
+    --primario: rgb(203,211,0);
+    --secundario: rgb(0,54,133);
+    --fuente-principal: 6.5rem;
+    --fuente-subtitulo: 3rem;
+    --fuente-campos: 2.5rem;
+    --font: 'Myriad Pro';
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /*1920x1080*/
+    /*
+    width: 1024px;
+    height: 1280px;
+    */
+    width: 1920px;
+    height: 1080px;
+    font-family: var(--font), serif;
+}
+
+#p1{
+    width: 90%;
+    height: 100%;
+    max-height: 1080px;
+    background-color: var(--blanco);
+}
+
+#p2{
+    width: 10%;
+    height: 100%;
+    max-height: 1080px;
+    background-color: var(--primario);
+    box-sizing: border-box;
+}
+
+.container_superior{
+    position: relative;
+    justify-content: center;
+    height: 120px;
+}
+
+.container_superior img{
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 20px;
+    left: 14.5%;
+}
+
+.container_superior .titulo{
+    position: absolute;
+    right: 45.5%;
+    font-size: var(--fuente-principal);
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 42%;
+    margin: 0;
+    padding: 50px;
+}
+
+.required {
+    color: red;
+}
+
+form{
+    width: 100%;
+    height: 100%;
+}
+
+form label{
+    font-size: var(--fuente-subtitulo);
+}
+
+form select{
+    text-align: center;
+    width: 75%;
+    padding: 12px 20px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: var(--fuente-campos);
+}
+
+form input[type="text"]{
+    text-align: center;
+    width: 75%;
+    padding: 12px 20px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: var(--fuente-campos);
+}
+
+form input[type="button"]{
+    text-align: center;
+    width: 20%;
+    padding: 12px 20px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    background-color: rgb(201,237,254);
+    border-radius: 6px;
+    font-size: var(--fuente-subtitulo);
+}
+
+form input[type="button"]:hover{
+    background-color: var(--secundario);
+    color: var(--blanco);
+}
+
+.container_check{
+    display: flex;
+    align-items: center;
+}
+
+.mycheck{
+    cursor: pointer;
+    background-color: white;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+    width: 40px;
+    height: 40px;
+    appearance: none;
+    border: 3px solid black;
+    margin-right: 15px;
+}
+.mycheck:checked {
+    background-color: var(--primario);
+}
+
+form input[type="submit"]{
+    width: 250px;
+    height: 150px;
+    padding: 14px 20px;
+    /*margin: 20px 0;*/
+    margin-top: 75px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 3.5rem;
+    background-color: var(--secundario);
+    color: var(--blanco);
+}
+
+form input[type="submit"]:hover{
+    background-color: var(--primario);
+    color: var(--blanco);
+}
+
+#ventana{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: auto;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    overflow: auto;
+}
+
+#ventana .terminos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 525px;
+    height: 525px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: var(--blanco);
+    border: 7px solid var(--primario);
+    font-size: var(--fuente-subtitulo);
+}
+
+#ventana .terminos button{
+    background-color: var(--secundario);
+    color: var(--blanco);
+}

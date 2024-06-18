@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preload" href="CSS/normalize.css" as="style">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link href="https://fonts.cdnfonts.com/css/myriad-pro" rel="preload" as="style">
+    <link href="https://fonts.cdnfonts.com/css/myriad-pro" rel="stylesheet">
+    <link rel="preload" href="CSS/styles.css" as="style">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Registro</title>
+</head>
+
+<body>
+    <div id="p1">
+        <header>
+            <section class="container_superior" id="sup_">
+                <!--
+                <img src="https://www.fna.gov.co/Style%20Library/fna/img/logo-fna.jpg" alt="logo_fna">
+                -->
+                <img src="images/LOGO%20FNA%202023%20.png" alt="">
+                <div class="titulo">
+                    <p>Registro</p>
+                </div>
+            </section>
+        </header>
+
+        <form action="" class="formulario" id="form_">
+            <label for="documento">Tipo de documento <span class="required">*</span></label><br>
+            <select name="documento" id="documento" required>
+                <option value="blank"></option>
+                <option value="cedula">Cédula de ciudadanía</option>
+                <option value="extranjero">Documento extranjero</option>
+                <option value="pasaporte">Pasaporte</option>
+                <option value="nit">Nit</option>
+            </select><br>
+            <label for="documento_id">Número de documento <span class="required">*</span></label><br>
+            <input type="text" id="documento_id" name="documento_id" required><br>
+            <label for="fnombre">Nombre completo <span class="required">*</span></label><br>
+            <input type="text" id="fnombre" name="fnombre" required><br>
+            <label for="correo_">Correo electrónico <span class="required">*</span></label><br>
+            <input type="text" id="correo_" name="correo_" required><br>
+            <label for="ftelefono">Teléfono móvil <span class="required">*</span></label><br>
+            <input type="text" id="ftelefono" name="ftelefono" required><br>
+            <input type="button" value="Leer términos y condiciones" onclick="Terminos()"><br>
+            <div class="container_check">
+                <input type="checkbox" class="mycheck" id="mycheck">
+                <label for="mycheck">Autorizo tratamiento de datos <span class="required">*</span>
+                </label>
+            </div>
+            <input type="submit" value="Continuar">
+        </form>
+        <div id="ventana">
+            <div class="terminos">
+                <img src="images/LOGO%20FNA%202023%20.png" alt="" style="width: 15%; height: 15%; margin-top: 5px">
+                <p style="text-align: justify">Declaraciones y autorizaciones
+                    De conformidad con lo previsto en las leyes estatutarias 1266 de 2008 y 1581 de 2012,
+                    declaro haber leído cuidadosamente el contenido del aviso de privacidad del FNA
+                    y haberlo comprendido a cabalidad, razón por la cual entiendo sus alcances y sus implicaciones
+                    y autorizo el uso de mi información personal y financiera al FNA para los fines mencionados
+                    en el aviso de privacidad
+                </p>
+                <button onclick="cerrarTerminos()">Acepto</button>
+            </div>
+        </div>
+    </div>
+    <div id="p2"></div>
+    <script>
+        function Terminos(){
+            document.getElementById("ventana").style.display = "flex";
+            /*document.getElementById("p1").style.backgroundColor = "rgba(0,0,0,0.7)";*/
+            document.getElementById("sup_").style.display = "none";
+            document.getElementById("form_").style.display = "none";
+        }
+        function cerrarTerminos(){
+            document.getElementById("ventana").style.display = "none";
+            /*document.getElementById("p1").style.backgroundColor = "#FFFFFF";*/
+            document.getElementById("sup_").style.display = "block";
+            document.getElementById("form_").style.display = "flex";
+        }
+    </script>
+</body>
+</html>

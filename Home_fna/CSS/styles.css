@@ -1,0 +1,100 @@
+@import url('https://fonts.cdnfonts.com/css/myriad-pro');
+
+  :root{
+    --blanco: #FFFFFF;
+    --primario: rgb(203,211,0);
+    --secundario: rgb(0,54,133);
+    --tercero: rgb(57,169,220);
+    --cuarto: #E7F8FE;
+    --fuente-principal: 2.8rem;
+    --fuente-subtitulo: 2.5rem;
+    --fuente-campos: 1.5rem;
+    --font: 'Myriad Pro';
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 1024px;
+    height: 1280px;
+    font-family: var(--font), serif;
+}
+
+.gfg{
+    position: relative;
+}
+
+.gfg img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.gfg .container_{
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    font-size: var(--fuente-principal);
+    color: var(--tercero);
+}
+
+.gfg .options{
+    position: absolute;
+    right: 0;
+    top: 48%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    width: 55%;
+    height: 10%;
+}
+
+/*
+button{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    background-color: var(--cuarto);
+    color: var(--tercero);
+    height: 9rem;
+}
+*/
+
+/*
+#agendar{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: var(--cuarto);
+    color: var(--tercero);
+    height: 7rem;
+}
+*/
+
+.btn{
+    background-color: var(--cuarto);
+    color: var(--tercero);
+    height: 7rem;
+    padding: 15px 32px;
+    /*text-align: justify-all;*/
+    text-decoration: none;
+    display: inline-flex;
+    align-content: space-between;
+    font-size: 35px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.btn:hover{
+    background-color: var(--secundario);
+}

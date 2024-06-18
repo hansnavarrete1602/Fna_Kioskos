@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01
+Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Swap image</title>
+    <script type="text/javascript">
+        window.onload=function() { attachBehaviors(); }
+        function attachBehaviors() {
+            // only doing one here, but you can add others
+            if (
+                document.getElementById('toggle_chk') &&
+                document.getElementById('my_img')
+            ) {
+                // So JS is "aware" of the element style
+                document.getElementById('my_img').style.display='block';
+                // Attach the behavior
+                document.getElementById('toggle_chk').onclick=function() {
+                    toggle_image(this);
+                };
+            }
+        }
+        //
+        function toggle_image(chk) {
+            // already checked for my_img
+            // if you want to hide it . . .
+            document.getElementById('my_img').style.display=(chk.checked)?'block':'none';
+            // if you just want to swap src
+            //var src=(chk.checked)?'my_image.jpg':'';
+            //document.getElementById('my_img').src=src;
+        }
+    </script>
+</head>
+<body>
+<form action="">
+    <p><input type="checkbox" name="toggle_chk" id="toggle_chk" value="1" checked>
+        <label for="toggle_chk">Image on/off</label></p>
+    <p><img src="images/check_before.png" id="my_img"></p>
+</form>
+</body>
+</html>
